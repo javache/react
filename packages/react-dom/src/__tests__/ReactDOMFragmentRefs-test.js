@@ -3733,7 +3733,7 @@ describe('FragmentRefs', () => {
       fragmentRef.current.focusLast();
     });
 
-    // @gate enableFragmentRefsTextNodes
+    // @gate enableFragmentRefsTextNodes || !__DEV__
     it('warns when observeUsing is called on text-only fragment', async () => {
       mockIntersectionObserver();
       const fragmentRef = React.createRef();
